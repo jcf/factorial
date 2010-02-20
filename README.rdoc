@@ -1,0 +1,15 @@
+= Factorial.language
+
+This started out as a gist that Jamie and I forked back and forth adding more and more implementations of factorial.
+
+You can see the original gist at http://gist.github.com/309771.
+
+As it became bigger it became impossible to store as a gist and would either have to have become one big gist or an individual repo and for the sake of syntax highlighting and this funky README the choice seemed obvious.
+
+=== Authors
+
+All the snippets start with an author's name in a language specific comment.
+
+==  Contributing
+
+Feel free to fork the repo and add your contribution by creating a new snippet or just by optimising an existing one.
