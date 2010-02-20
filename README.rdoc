@@ -1,6 +1,6 @@
 = Factorial.language
 
-This started out as a gist that Jamie and I forked back and forth adding more and more implementations of factorial.
+This started out as a gist that Jamie[http://github.com/jamierumbelow] and I forked back and forth adding more and more implementations of factorial.
 
 You can see the original gist at http://gist.github.com/309771.
 
