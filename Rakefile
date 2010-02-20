@@ -24,7 +24,9 @@ begin_html = <<HTML
   </head>
   <body>
     <div id="snippets">
-    <h1>Factorial.language</h1>
+    <h1>
+      <a href="http://github.com/jcf/factorial">Factorial.language</a>
+    </h1>
 HTML
 
 end_html = <<HTML
