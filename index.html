@@ -1,80 +1,151 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>jcf/factorial @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #a7c5a6;
-		  font-family: "Helvetica,Arial,FreeSans"; 
-  		color: #000000;
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Factorial.language</title>
+  <style>
+    body {
+      margin: 40px 0;
+      font: 14px 'Helvetica Neue', helvetica, sans-serif;
+      color: #444;
     }
-    #container {
+    pre {
+      font: 11px Menlo, monospace;
+      background-color: #fafafa;
+      border: 1px solid #ccc;
+      margin: 10px 0;
+      padding: 5px;
+    }
+    #snippets {
       margin: 0 auto;
-      width: 700px;
+      width: 600px;
     }
-		h1 { font-size: 3.8em; color: #583a59; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #583a59; }
-    h3 { text-align: center; color: #583a59; }
-    a { color: #583a59; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
-</head>
+  </style>
+  </head>
+  <body>
+    <div id="snippets">
+    <h1>Factorial.language</h1>
+      <div id="james-conroy-finn-applescript">
+        <h3 class="author">James Conroy-Finn</h3>
+        <p class="file">factorial.applescript</p>
+        <pre name="code" class="james-conroy-finn applescript">
+on factorial(n)
+	if n is equal to 0 then
+		return 1
+	else
+		return n * (factorial(n - 1))
+	end if
+end factorial
+</pre>
+      </div>
+      <div id="jamie-rumbelow-c">
+        <h3 class="author">Jamie Rumbelow</h3>
+        <p class="file">factorial.c</p>
+        <pre name="code" class="jamie-rumbelow c">
+int factorial( int num ) {
+	if ( num <= 1 ) {
+		return 1;
+	} else {
+		return  num * factorial( num-1 );
+	}
+}
+</pre>
+      </div>
+      <div id="jamie-rumbelow-go">
+        <h3 class="author">Jamie Rumbelow</h3>
+        <p class="file">factorial.go</p>
+        <pre name="code" class="jamie-rumbelow go">
+func Factorial(num int) int {
+   if num == 0 {
+      return 1;	
+   } else {
+      return num * Factorial(num - 1);
+   }
+}
+</pre>
+      </div>
+      <div id="james-conroy-finn-hs">
+        <h3 class="author">James Conroy-Finn</h3>
+        <p class="file">factorial.hs</p>
+        <pre name="code" class="james-conroy-finn hs">
+factorial n = product [1..n]
+</pre>
+      </div>
+      <div id="jamie-rumbelow-java">
+        <h3 class="author">Jamie Rumbelow</h3>
+        <p class="file">factorial.java</p>
+        <pre name="code" class="jamie-rumbelow java">
+public class Factorial {
+	public static int factorial(int num) {       
+		if (num == 0) { 
+			return 1; 
+		} else {
+			return num * factorial(num - 1);
+		}
+	}
+}
+</pre>
+      </div>
+      <div id="james-conroy-finn-js">
+        <h3 class="author">James Conroy-Finn</h3>
+        <p class="file">factorial.js</p>
+        <pre name="code" class="james-conroy-finn js">
+function factorial(n) {
+  return (n == 0 ? 1 : n * factorial(n - 1));
+}
+</pre>
+      </div>
+      <div id="jamie-rumbelow-php">
+        <h3 class="author">Jamie Rumbelow</h3>
+        <p class="file">factorial.php</p>
+        <pre name="code" class="jamie-rumbelow php">
+function factorial($num) {
+	return ($num == 0) ? 1 : $num * factorial($num - 1);
+}
+</pre>
+      </div>
+      <div id="james-conroy-finn-pl">
+        <h3 class="author">James Conroy-Finn</h3>
+        <p class="file">factorial.pl</p>
+        <pre name="code" class="james-conroy-finn pl">
+sub factorial {
+  my $arg = shift;
+  return $arg == 1 ? 1 : $arg * factorial($arg - 1);
+}
+</pre>
+      </div>
+      <div id="jamie-rumbelow-py">
+        <h3 class="author">Jamie Rumbelow</h3>
+        <p class="file">factorial.py</p>
+        <pre name="code" class="jamie-rumbelow py">
+def factorial(num): 
+	return (1 if num == 0 else num * factorial(num - 1))
+</pre>
+      </div>
+      <div id="james-conroy-finn-rb">
+        <h3 class="author">James Conroy-Finn</h3>
+        <p class="file">factorial.rb</p>
+        <pre name="code" class="james-conroy-finn rb">
+module Math
+  def self.factorial(f)
+    f == 0 ? 1 : f * factorial(f - 1)
+  end
+end
 
-<body>
-  <a href="http://github.com/jcf/factorial"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-  
-  <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/jcf/factorial/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/jcf/factorial/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+# Or we can extend an instance of Fixnum so we can do 5.factorial :)
+class Fixnum
+  def factorial
+    self == 0 ? 1 : self * (self - 1).factorial
+  end
+end
+</pre>
+      </div>
+      <div id="james-conroy-finn-scala">
+        <h3 class="author">James Conroy-Finn</h3>
+        <p class="file">factorial.scala</p>
+        <pre name="code" class="james-conroy-finn scala">
+def factorial(n:Int):Int = if (n == 0) 1 else n * factorial(n - 1)
+</pre>
+      </div>
     </div>
-      
-    <h1><a href="http://github.com/jcf/factorial">factorial</a> 
-      <span class="small">by <a href="http://github.com/jcf">jcf</a></span></h1>
-
-    <div class="description">
-      Implement a factorial functional in any and every language
-    </div>
-
-    <h2>Authors</h2>
-<p>James Conroy-Finn (james@logi.cl)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>James Conroy-Finn (jamesconroyfinn@gmail.com)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/jcf/factorial/zipball/master">zip</a> or
-      <a href="http://github.com/jcf/factorial/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/jcf/factorial</pre>
-    </p>
-      
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/jcf/factorial">jcf/factorial</a>
-    </div>
-    
-  </div>
-
-  
-</body>
+  </body>
 </html>
