@@ -1,7 +1,13 @@
+# encoding: utf-8
+
+require 'erb'
+include ERB::Util
+
 begin_html = <<HTML
 <!DOCTYPE html>
 <html>
   <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>Factorial.language</title>
   <style>
     body {
@@ -42,7 +48,7 @@ task :html do
     extension = File.extname(file)[1..-1]
     lines = File.readlines(file)
     author = lines.shift.match(/Author: (.*)$/i).to_a.last
-    code = lines.join('').strip
+    code = html_escape(lines.join('').strip)
 
     snippet_author = (author || 'Unknown').gsub(%r{\W+}, '-').downcase
     snippet_html = <<-HTML
