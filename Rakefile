@@ -49,7 +49,7 @@ task :html do
       <div id="#{snippet_author}-#{extension}">
         <h3 class="author">#{author || 'Unknown'}</h3>
         <p class="file">#{File.basename(file)}</p>
-        <pre name="code" class="#{snippet_author} #{extension}">
+        <pre class="#{snippet_author} #{extension}">
 #{code}
 </pre>
       </div>
