@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>Factorial.language</title>
   <style>
     body {
@@ -44,7 +45,7 @@ end factorial
         <p class="file">factorial.c</p>
         <pre class="jamie-rumbelow c">
 int factorial( int num ) {
-	if ( num <= 1 ) {
+	if ( num &lt;= 1 ) {
 		return 1;
 	} else {
 		return  num * factorial( num-1 );
