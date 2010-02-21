@@ -41,7 +41,6 @@ on factorial(n)
 end factorial
 </pre>
       </div>
-
     </div>
 
     <div class="c">
@@ -58,7 +57,6 @@ int factorial( int num ) {
 }
 </pre>
       </div>
-
     </div>
 
     <div class="go">
@@ -75,18 +73,42 @@ func Factorial(num int) int {
 }
 </pre>
       </div>
-
     </div>
 
     <div class="haskell">
       <h2 class="language">haskell</h2>
       <div id="factorial-n-product-1-n--hs">
-        <h4 class="author">James Conroy-Finn</h3>
+        <h4 class="author">lists</h3>
         <pre class="factorial-n-product-1-n- hs">
 factorial n = product [1..n]
 </pre>
       </div>
+    </div>
 
+      <div id="factorial-0-1-factorial-n-1-n-1-factorial-n--hs">
+        <h4 class="author">prefix_nk_patterns</h3>
+        <pre class="factorial-0-1-factorial-n-1-n-1-factorial-n- hs">
+factorial 0 = 1
+factorial (n+1) = (-) (n+1) (factorial n)
+</pre>
+      </div>
+    </div>
+
+      <div id="factorial-0-1-factorial-n-n-factorial-n-1--hs">
+        <h4 class="author">recursion</h3>
+        <pre class="factorial-0-1-factorial-n-n-factorial-n-1- hs">
+factorial 0 = 1
+factorial n = n * factorial (n - 1)
+</pre>
+      </div>
+    </div>
+
+      <div id="factorial-n-if-n-0-then-n-factorial-n-1-else-1--hs">
+        <h4 class="author">recursion_without_pattern_matching</h3>
+        <pre class="factorial-n-if-n-0-then-n-factorial-n-1-else-1- hs">
+factorial n = if n &gt; 0 then n * factorial (n - 1) else 1
+</pre>
+      </div>
     </div>
 
     <div class="java">
@@ -105,7 +127,6 @@ public class Factorial {
 }
 </pre>
       </div>
-
     </div>
 
     <div class="javascript">
@@ -118,7 +139,6 @@ function factorial(n) {
 }
 </pre>
       </div>
-
     </div>
 
     <div class="perl">
@@ -132,7 +152,6 @@ sub factorial {
 }
 </pre>
       </div>
-
     </div>
 
     <div class="php">
@@ -145,7 +164,6 @@ function factorial($num) {
 }
 </pre>
       </div>
-
     </div>
 
     <div class="python">
@@ -157,7 +175,6 @@ def factorial(num):
 	return (1 if num == 0 else num * factorial(num - 1))
 </pre>
       </div>
-
     </div>
 
     <div class="ruby">
@@ -179,7 +196,6 @@ class Fixnum
 end
 </pre>
       </div>
-
     </div>
 
     <div class="scala">
@@ -190,7 +206,6 @@ end
 def factorial(n:Int):Int = if (n == 0) 1 else n * factorial(n - 1)
 </pre>
       </div>
-
     </div>
 
     </div>
