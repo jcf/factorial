@@ -44,24 +44,36 @@ HTML
 desc "Generate an HTML summary of all our Snippets"
 task :html do
   html = begin_html
-  Dir['factorial*'].each do |file|
-    extension = File.extname(file)[1..-1]
-    lines = File.readlines(file)
-    author = lines.shift.match(/Author: (.*)$/i).to_a.last
-    code = html_escape(lines.join('').strip)
+  Dir['*'].each do |path|
+    next unless File.directory?(path)
 
-    snippet_author = (author || 'Unknown').gsub(%r{\W+}, '-').downcase
-    snippet_html = <<-HTML
+    html += %Q{    <div class="#{path}">\n}
+    html += %Q{      <h2 class="language">#{path}</h2>\n}
+
+    Dir[path + '/*'].each do |file|
+      extension = File.extname(file)[1..-1]
+      author = File.basename(file, ".#{extension}")
+
+      lines = File.readlines(file)
+
+      # This is a little bit of authentic code smell
+      code = lines.reject! { |line| line =~ /Author: (.*)$/i }
+      code = html_escape(code.join('').strip)
+
+      snippet_author = lines.join.gsub(%r{\W+}, '-').downcase
+      snippet_html = <<-HTML
       <div id="#{snippet_author}-#{extension}">
-        <h3 class="author">#{author || 'Unknown'}</h3>
-        <p class="file">#{File.basename(file)}</p>
+        <h4 class="author">#{author}</h3>
         <pre class="#{snippet_author} #{extension}">
 #{code}
 </pre>
       </div>
     HTML
 
-    html += snippet_html
+      html += snippet_html
+      
+      html += %Q{    </div>\n\n}
+    end
   end
 
   html += end_html
