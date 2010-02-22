@@ -32,10 +32,8 @@ begin_html = <<HTML
     .snippet {
       background-color: #fff;
       margin-bottom: 10px;
-      padding: 10px;
     }
     h2.language {
-      /* border-bottom: 1px solid #ccc; */
       margin: 0 0 10px;
     }
     h4.author {
