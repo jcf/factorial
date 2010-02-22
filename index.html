@@ -189,6 +189,16 @@ def factorial(num):
     <div class="snippet ruby">
       <h2 class="language">ruby</h2>
       <div id="james-conroy-finn-rb">
+        <h4 class="author"><span>fixnum.rb</span> <span>James Conroy-Finn</span></h4>
+        <pre class="james-conroy-finn rb">
+class Fixnum
+  def factorial
+    self == 0 ? 1 : self * (self - 1).factorial
+  end
+end
+</pre>
+      </div>
+      <div id="james-conroy-finn-rb">
         <h4 class="author"><span>inject.rb</span> <span>James Conroy-Finn</span></h4>
         <pre class="james-conroy-finn rb">
 def factorial(number)
@@ -197,18 +207,11 @@ end
 </pre>
       </div>
       <div id="james-conroy-finn-rb">
-        <h4 class="author"><span>James Conroy-Finn</span></h4>
+        <h4 class="author"><span>math.rb</span> <span>James Conroy-Finn</span></h4>
         <pre class="james-conroy-finn rb">
 module Math
   def self.factorial(f)
     f == 0 ? 1 : f * factorial(f - 1)
-  end
-end
-
-# Or we can extend an instance of Fixnum so we can do 5.factorial :)
-class Fixnum
-  def factorial
-    self == 0 ? 1 : self * (self - 1).factorial
   end
 end
 </pre>
