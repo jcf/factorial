@@ -2,6 +2,7 @@
 <html>
   <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=600, user-scalable=yes">
   <title>Factorial.language</title>
   <style>
     body {
@@ -20,6 +21,22 @@
       margin: 0 auto;
       width: 600px;
     }
+    .snippet {
+      background-color: #fff;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    h2.language {
+      /* border-bottom: 1px solid #ccc; */
+      margin: 0 0 10px;
+    }
+    h4.author {
+      color: #999;
+    }
+    h4.author span:first-child {
+      margin-right: 10px;
+      color: #444;
+    }
   </style>
   </head>
   <body>
@@ -27,11 +44,11 @@
     <h1>
       <a href="http://github.com/jcf/factorial">Factorial.language</a>
     </h1>
-    <div class="applescript">
+    <div class="snippet applescript">
       <h2 class="language">applescript</h2>
-      <div id="on-factorial-n-if-n-is-equal-to-0-then-return-1-else-return-n-factorial-n-1-end-if-end-factorial--applescript">
-        <h4 class="author">James Conroy-Finn</h3>
-        <pre class="on-factorial-n-if-n-is-equal-to-0-then-return-1-else-return-n-factorial-n-1-end-if-end-factorial- applescript">
+      <div id="james-conroy-finn-applescript">
+        <h4 class="author"><span>James Conroy-Finn</span></h4>
+        <pre class="james-conroy-finn applescript">
 on factorial(n)
 	if n is equal to 0 then
 		return 1
@@ -43,11 +60,11 @@ end factorial
       </div>
     </div>
 
-    <div class="c">
+    <div class="snippet c">
       <h2 class="language">c</h2>
-      <div id="int-factorial-int-num-if-num-1-return-1-else-return-num-factorial-num-1--c">
-        <h4 class="author">Jamie Rumbelow</h3>
-        <pre class="int-factorial-int-num-if-num-1-return-1-else-return-num-factorial-num-1- c">
+      <div id="jamie-rumbelow-c">
+        <h4 class="author"><span>Jamie Rumbelow</span></h4>
+        <pre class="jamie-rumbelow c">
 int factorial( int num ) {
 	if ( num &lt;= 1 ) {
 		return 1;
@@ -59,11 +76,11 @@ int factorial( int num ) {
       </div>
     </div>
 
-    <div class="go">
+    <div class="snippet go">
       <h2 class="language">go</h2>
-      <div id="func-factorial-num-int-int-if-num-0-return-1-else-return-num-factorial-num-1--go">
-        <h4 class="author">Jamie Rumbelow</h3>
-        <pre class="func-factorial-num-int-int-if-num-0-return-1-else-return-num-factorial-num-1- go">
+      <div id="jamie-rumbelow-go">
+        <h4 class="author"><span>Jamie Rumbelow</span></h4>
+        <pre class="jamie-rumbelow go">
 func Factorial(num int) int {
    if num == 0 {
       return 1;	
@@ -75,47 +92,41 @@ func Factorial(num int) int {
       </div>
     </div>
 
-    <div class="haskell">
+    <div class="snippet haskell">
       <h2 class="language">haskell</h2>
-      <div id="factorial-n-product-1-n--hs">
-        <h4 class="author">lists</h3>
-        <pre class="factorial-n-product-1-n- hs">
+      <div id="james-conroy-finn-hs">
+        <h4 class="author"><span>lists.hs</span> <span>James Conroy-Finn</span></h4>
+        <pre class="james-conroy-finn hs">
 factorial n = product [1..n]
 </pre>
       </div>
-    </div>
-
-      <div id="factorial-0-1-factorial-n-1-n-1-factorial-n--hs">
-        <h4 class="author">prefix_nk_patterns</h3>
-        <pre class="factorial-0-1-factorial-n-1-n-1-factorial-n- hs">
+      <div id="james-conroy-finn-hs">
+        <h4 class="author"><span>prefix_nk_patterns.hs</span> <span>James Conroy-Finn</span></h4>
+        <pre class="james-conroy-finn hs">
 factorial 0 = 1
 factorial (n+1) = (-) (n+1) (factorial n)
 </pre>
       </div>
-    </div>
-
-      <div id="factorial-0-1-factorial-n-n-factorial-n-1--hs">
-        <h4 class="author">recursion</h3>
-        <pre class="factorial-0-1-factorial-n-n-factorial-n-1- hs">
+      <div id="james-conroy-finn-hs">
+        <h4 class="author"><span>recursion.hs</span> <span>James Conroy-Finn</span></h4>
+        <pre class="james-conroy-finn hs">
 factorial 0 = 1
 factorial n = n * factorial (n - 1)
 </pre>
       </div>
-    </div>
-
-      <div id="factorial-n-if-n-0-then-n-factorial-n-1-else-1--hs">
-        <h4 class="author">recursion_without_pattern_matching</h3>
-        <pre class="factorial-n-if-n-0-then-n-factorial-n-1-else-1- hs">
+      <div id="james-conroy-finn-hs">
+        <h4 class="author"><span>recursion_without_pattern_matching.hs</span> <span>James Conroy-Finn</span></h4>
+        <pre class="james-conroy-finn hs">
 factorial n = if n &gt; 0 then n * factorial (n - 1) else 1
 </pre>
       </div>
     </div>
 
-    <div class="java">
+    <div class="snippet java">
       <h2 class="language">java</h2>
-      <div id="public-class-factorial-public-static-int-factorial-int-num-if-num-0-return-1-else-return-num-factorial-num-1--java">
-        <h4 class="author">Jamie Rumbelow</h3>
-        <pre class="public-class-factorial-public-static-int-factorial-int-num-if-num-0-return-1-else-return-num-factorial-num-1- java">
+      <div id="jamie-rumbelow-java">
+        <h4 class="author"><span>Jamie Rumbelow</span></h4>
+        <pre class="jamie-rumbelow java">
 public class Factorial {
 	public static int factorial(int num) {       
 		if (num == 0) { 
@@ -129,11 +140,11 @@ public class Factorial {
       </div>
     </div>
 
-    <div class="javascript">
+    <div class="snippet javascript">
       <h2 class="language">javascript</h2>
-      <div id="function-factorial-n-return-n-0-1-n-factorial-n-1--js">
-        <h4 class="author">James Conroy-Finn</h3>
-        <pre class="function-factorial-n-return-n-0-1-n-factorial-n-1- js">
+      <div id="james-conroy-finn-js">
+        <h4 class="author"><span>James Conroy-Finn</span></h4>
+        <pre class="james-conroy-finn js">
 function factorial(n) {
   return (n == 0 ? 1 : n * factorial(n - 1));
 }
@@ -141,11 +152,11 @@ function factorial(n) {
       </div>
     </div>
 
-    <div class="perl">
+    <div class="snippet perl">
       <h2 class="language">perl</h2>
-      <div id="sub-factorial-my-arg-shift-return-arg-1-1-arg-factorial-arg-1--pl">
-        <h4 class="author">James Conroy-Finn</h3>
-        <pre class="sub-factorial-my-arg-shift-return-arg-1-1-arg-factorial-arg-1- pl">
+      <div id="james-conroy-finn-pl">
+        <h4 class="author"><span>James Conroy-Finn</span></h4>
+        <pre class="james-conroy-finn pl">
 sub factorial {
   my $arg = shift;
   return $arg == 1 ? 1 : $arg * factorial($arg - 1);
@@ -154,11 +165,11 @@ sub factorial {
       </div>
     </div>
 
-    <div class="php">
+    <div class="snippet php">
       <h2 class="language">php</h2>
-      <div id="function-factorial-num-return-num-0-1-num-factorial-num-1--php">
-        <h4 class="author">Jamie Rumbelow</h3>
-        <pre class="function-factorial-num-return-num-0-1-num-factorial-num-1- php">
+      <div id="jamie-rumbelow-php">
+        <h4 class="author"><span>Jamie Rumbelow</span></h4>
+        <pre class="jamie-rumbelow php">
 function factorial($num) {
 	return ($num == 0) ? 1 : $num * factorial($num - 1);
 }
@@ -166,22 +177,22 @@ function factorial($num) {
       </div>
     </div>
 
-    <div class="python">
+    <div class="snippet python">
       <h2 class="language">python</h2>
-      <div id="def-factorial-num-return-1-if-num-0-else-num-factorial-num-1--py">
-        <h4 class="author">Jamie Rumbelow</h3>
-        <pre class="def-factorial-num-return-1-if-num-0-else-num-factorial-num-1- py">
+      <div id="jamie-rumbelow-py">
+        <h4 class="author"><span>Jamie Rumbelow</span></h4>
+        <pre class="jamie-rumbelow py">
 def factorial(num): 
 	return (1 if num == 0 else num * factorial(num - 1))
 </pre>
       </div>
     </div>
 
-    <div class="ruby">
+    <div class="snippet ruby">
       <h2 class="language">ruby</h2>
-      <div id="module-math-def-self-factorial-f-f-0-1-f-factorial-f-1-end-end-or-we-can-extend-an-instance-of-fixnum-so-we-can-do-5-factorial-class-fixnum-def-factorial-self-0-1-self-self-1-factorial-end-end--rb">
-        <h4 class="author">James Conroy-Finn</h3>
-        <pre class="module-math-def-self-factorial-f-f-0-1-f-factorial-f-1-end-end-or-we-can-extend-an-instance-of-fixnum-so-we-can-do-5-factorial-class-fixnum-def-factorial-self-0-1-self-self-1-factorial-end-end- rb">
+      <div id="james-conroy-finn-rb">
+        <h4 class="author"><span>James Conroy-Finn</span></h4>
+        <pre class="james-conroy-finn rb">
 module Math
   def self.factorial(f)
     f == 0 ? 1 : f * factorial(f - 1)
@@ -198,11 +209,11 @@ end
       </div>
     </div>
 
-    <div class="scala">
+    <div class="snippet scala">
       <h2 class="language">scala</h2>
-      <div id="def-factorial-n-int-int-if-n-0-1-else-n-factorial-n-1--scala">
-        <h4 class="author">James Conroy-Finn</h3>
-        <pre class="def-factorial-n-int-int-if-n-0-1-else-n-factorial-n-1- scala">
+      <div id="james-conroy-finn-scala">
+        <h4 class="author"><span>James Conroy-Finn</span></h4>
+        <pre class="james-conroy-finn scala">
 def factorial(n:Int):Int = if (n == 0) 1 else n * factorial(n - 1)
 </pre>
       </div>
