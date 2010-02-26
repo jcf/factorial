@@ -120,6 +120,20 @@ factorial n = if n &gt; 0 then n * factorial (n - 1) else 1
       </div>
     </div>
 
+    <div class="snippet io">
+      <h2 class="language">io</h2>
+      <div id="jamie-rumbelow--io">
+        <h4 class="author"><span>Jamie Rumbelow.io</span> <span>Jamie Rumbelow */</span></h4>
+        <pre class="jamie-rumbelow- io">
+factorial := method(n, 
+	if(n == 0, return 1)
+	res := 1
+	1 to(n) foreach(i, res = res * i) 
+)
+</pre>
+      </div>
+    </div>
+
     <div class="snippet java">
       <h2 class="language">java</h2>
       <div id="jamie-rumbelow-java">
@@ -145,6 +159,22 @@ public class Factorial {
         <pre class="james-conroy-finn js">
 function factorial(n) {
   return (n == 0 ? 1 : n * factorial(n - 1));
+}
+</pre>
+      </div>
+    </div>
+
+    <div class="snippet objective-c">
+      <h2 class="language">objective-c</h2>
+      <div id="jamie-rumbelow-m">
+        <h4 class="author"><span>Jamie Rumbelow</span></h4>
+        <pre class="jamie-rumbelow m">
+NSUInteger Factorial(NSUInteger num) {
+	if (num &lt;= 1) {
+		return 1;
+	} else {
+		return  num * [Factorial num-1];
+	}
 }
 </pre>
       </div>
